@@ -1,6 +1,6 @@
 /* eslint-disable */
 export default {
-  displayName: 'api-generated-db-types',
+  displayName: 'client-generated-graphql-types',
   preset: '../../../../jest.preset.js',
   globals: {
     'ts-jest': {
@@ -12,5 +12,5 @@ export default {
     '^.+\\.[tj]sx?$': 'ts-jest',
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../../../coverage/libs/api/generated/db-types',
+  coverageDirectory: '../../../../coverage/libs/client/generated/graphql-types',
 };

@@ -20,6 +20,9 @@
       ],
       "@nx-practice/api/generated/db-types": [
         "libs/api/generated/db-types/src/index.ts"
+      ],
+      "@nx-practice/client/generated/graphql-types": [
+        "libs/client/generated/graphql-types/src/index.ts"
       ]
     }
   },

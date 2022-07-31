@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 
 import { DbService } from '@nx-practice/api/data-access-db';
 import {
+  FindUniqueUserArgs,
   UpdateOneUserArgs,
   UserCreateInput,
 } from '@nx-practice/api/generated/db-types';
@@ -18,15 +19,15 @@ export class UserService {
     return this.db.user.findMany();
   }
 
-  findOne(id: number) {
-    return this.db.user.findFirst({ where: { id } });
+  findOne(findUserArgs: FindUniqueUserArgs) {
+    return this.db.user.findUnique(findUserArgs);
   }
 
   update(updateUserInput: UpdateOneUserArgs) {
     return this.db.user.update(updateUserInput);
   }
 
-  // remove(id: number) {
-  //   return `This action removes a #${id} user`;
-  // }
+  remove(removeUserArgs: FindUniqueUserArgs) {
+    return this.db.user.delete(removeUserArgs);
+  }
 }

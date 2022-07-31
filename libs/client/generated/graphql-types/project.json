@@ -1,23 +1,23 @@
 {
   "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/api/generated/db-types/src",
+  "sourceRoot": "libs/client/generated/graphql-types/src",
   "projectType": "library",
   "targets": {
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/api/generated/db-types/**/*.ts"]
+        "lintFilePatterns": ["libs/client/generated/graphql-types/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/api/generated/db-types"],
+      "outputs": ["coverage/libs/client/generated/graphql-types"],
       "options": {
-        "jestConfig": "libs/api/generated/db-types/jest.config.ts",
+        "jestConfig": "libs/client/generated/graphql-types/jest.config.ts",
         "passWithNoTests": true
       }
     }
   },
-  "tags": ["scope:api"]
+  "tags": ["scope:client"]
 }
